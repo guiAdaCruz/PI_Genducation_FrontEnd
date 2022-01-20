@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+.ft-rubik{
+    font-family:'Rubik', sans-serif;
+}
+
+.bg-gradient{
+    background: linear-gradient(180deg, #760AFF 0%, #8F00FF 100%);
+}
+
+.logo{
+    width:40px;
+    height: 40px;
+}
