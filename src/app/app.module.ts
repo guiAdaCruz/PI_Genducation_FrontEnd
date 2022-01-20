@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 <<<<<<< HEAD
 import { MenuComponent } from './menu/menu.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
 =======
 <<<<<<< HEAD
 import { ContatoComponent } from './contato/contato.component';
@@ -18,7 +19,8 @@ import { RodapeComponent } from './rodape/rodape.component';
   declarations: [
     AppComponent,
 <<<<<<< HEAD
-    MenuComponent
+    MenuComponent,
+CadastrarComponent
 =======
 <<<<<<< HEAD
     ContatoComponent
