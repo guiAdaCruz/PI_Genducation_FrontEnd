@@ -1,17 +1,15 @@
-#img-bg {
-    background-image: url('../../assets/img/imagem-cadastrar.png');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap%27');
 
-    min-height: 500px;
+.ft-rubik { 
+    font-family: 'Rubik', sans-serif; 
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
+
 
 .b-cancelar {
     width: 140px;
     height: 40px;
-    
+    border: 0px;
     background: linear-gradient(180deg, rgba(164, 163, 166, 0.71) 0%, rgba(100, 100, 100, 0.71) 100%);
     box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
     border-radius: 45px;
@@ -23,7 +21,7 @@
     height: 40px;
     left: 1101px;
     top: 849px;
-    
+    border: 0px;
     background: linear-gradient(180deg, rgba(118, 10, 255, 0.71) 0%, rgba(5, 0, 255, 0.71) 100%);
     box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
     border-radius: 45px;
@@ -36,4 +34,35 @@
 background: #FFFFFF;
 box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
 border-radius: 15px;
+}
+
+.bg-div{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
+}
+.bg-gradient {
+    background: linear-gradient(180deg, rgba(118, 10, 255, 0.71) 0%, rgba(5, 0, 255, 0.71) 100%);
+    width: 100%;
+
+    background-size: 200%;
+}
+.botao{
+
+    width: 140px;
+    height: 40px;
+
+    border: 0px;
+    background: linear-gradient(180deg, rgba(118, 10, 255, 0.71) 0%, rgba(5, 0, 255, 0.71) 100%);
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+}
+
+.input{
+
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
 }
