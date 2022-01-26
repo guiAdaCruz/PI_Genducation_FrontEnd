@@ -2,59 +2,61 @@
 
     <div class="container-fluid d-flex justify-content-center">
 
-                <div class="row d-flex justify-content-center bg-div col-md-5 ft-rubik">
-                    <div class="col-xl-12">
+        <div class="row d-flex justify-content-center bg-div col-md-5 ft-rubik">
+            <div class="col-xl-12">
 
-                        <div class="row d-flex justify-content-center">
-                            <h1 class="text-center mt-3">Olá, Estudante</h1>
-                        </div>
+                <div class="row d-flex justify-content-center">
+                    <h1 class="text-center mt-3">Olá, Estudante</h1>
+                </div>
 
-                        <div class="d-flex justify-content-center mb-3">
-                            <h4>Cadastre sua conta</h4>
-                        </div>
+                <div class="d-flex justify-content-center mb-3">
+                    <h4>Cadastre sua conta</h4>
+                </div>
 
-                        <div class="form-group">
-                            <label for="nome">Nome</label>
-                            <input class="form-control formato" type="text" name="nome" id="nome" placeholder="Digite seu nome">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input class="form-control formato mb-3" type="email" name="email" id="email" placeholder="Digite seu e-mail">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="senha">Senha</label>
-                            <input class="form-control formato mb-3" type="password" name="senha" id="email" placeholder="Digite sua senha">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="confirmarSenha">Senha</label>
-                            <input class="form-control formato mb-3" type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Confirme sua senha">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="tipo">Tipo de usuário</label>
-                           <select class="form-control formato mb-3" name="tipo" id="tipo">
-                               <option>Selecione um tipo de usuário</option>
-                               <option value="estudante">Estudante</option>
-                               <option value="estudante">Professor</option>
-                           </select>
-                        </div>
-    
-                        <div>
-                            <div class="d-flex justify-content-center mb-3">
-                                <button type="submit" class="btn b-cancelar mt-3 mr-3 text-white" routerLink='/entrar'>Cancelar</button>
-                                <button type="submit" class="btn b-cadastrar mt-3 text-white">Cadastrar</button>
-                            </div>
-                        </div>
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input [(ngModel)]="usuario.nomeCompleto" class="form-control formato" type="text" name="nome"
+                        id="nome" placeholder="Digite seu nome">
+                </div>
 
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input [(ngModel)]="usuario.email" class="form-control formato mb-3" type="email" name="email"
+                        id="email" placeholder="Digite seu e-mail">
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input (input)='confirmarSenha($event)' class="form-control formato mb-3" type="password"
+                        name="senha" id="email" placeholder="Digite sua senha">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmarSenha">Confirmar senha</label>
+                    <input [(ngModel)]="usuario.senha" class="form-control formato mb-3" type="password"
+                        name="confirmarSenha" id="confirmarSenha" placeholder="Confirme sua senha">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">Tipo de usuário</label>
+                    <select class="form-control formato mb-3" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                        <option>Selecione um tipo de usuário</option>
+                        <option value="estudante">Estudante</option>
+                        <option value="professor">Professor</option>
+                    </select>
+                </div>
+
+                <div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <button type="submit" class="btn b-cancelar mt-3 mr-3 text-white"
+                            routerLink='/entrar'>Cancelar</button>
+                        <button type="submit" class="btn b-cadastrar mt-3 text-white"
+                            (click)='cadastrar()'>Cadastrar</button>
                     </div>
                 </div>
 
             </div>
+        </div>
 
-
-
-
+    </div>
 </div>
