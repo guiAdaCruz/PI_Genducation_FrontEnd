@@ -1,3 +1,4 @@
+import { Postagem } from "./Postagem"
 
 export class Usuario {
     public email: string
@@ -5,4 +6,5 @@ export class Usuario {
     public senha: string
     public token: string
     public tipo: string
+    public postagem: Postagem[]
 }
