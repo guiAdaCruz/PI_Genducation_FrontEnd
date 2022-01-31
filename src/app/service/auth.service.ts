@@ -16,9 +16,6 @@ export class AuthService {
   ) { }
 
   /*
-  
-  
-
     https://localhost:8080/Genducation/usuarios/logar
     https://localhost:8080/Genducation/usuarios/cadastrar
   */
@@ -31,8 +28,8 @@ export class AuthService {
     return this.http.post<Usuario>('https://app-genducation.herokuapp.com/Genducation/usuarios/cadastrar', usuario)
   }
 
-  getByIdUser(email: string): Observable<Usuario>{
-    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${email}`)
+  getByIdUser(id: string): Observable<Usuario>{
+    return this.http.get<Usuario>(`https://app-genducation.herokuapp.com/Genducation/usuarios/${id}`)
   }
 
   logado(){

@@ -6,5 +6,5 @@ export class Tema{
     public tema: string
     public subtema: string
     public escolaridade: string
-    public postagem: Postagem[]
+    public postagens: Postagem[]
 }

@@ -18,18 +18,18 @@ export class PostagemService {
   }
 
   getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('http://localhost:8080/Genducation/postagens', this.token)
+    return this.http.get<Postagem[]>('https://app-genducation.herokuapp.com/Genducation/postagens', this.token)
   }
 
   getPostagemByTitulo(titulo: string): Observable<Postagem>{
-    return this.http.get<Postagem>(`http://localhost:8080/Genducation/postagens/titulo/${titulo}`, this.token)
+    return this.http.get<Postagem>(`https://app-genducation.herokuapp.com/Genducation/postagens/titulo/${titulo}`, this.token)
   }
 
   getByPostagem(postagem: string): Observable<Postagem>{
-    return this.http.get<Postagem>(`http://localhost:8080/Genducation/postagens/postagem/${postagem}`, this.token)
+    return this.http.get<Postagem>(`https://app-genducation.herokuapp.com/Genducation/postagens/postagem/${postagem}`, this.token)
   }
 
   postPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.post<Postagem>('http://localhost:8080/Genducation/postagens/save', postagem, this.token)
+    return this.http.post<Postagem>('https://app-genducation.herokuapp.com/Genducation/postagens/save', postagem, this.token)
   }
 }

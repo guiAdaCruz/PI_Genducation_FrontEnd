@@ -6,5 +6,5 @@ export class Usuario {
     public senha: string
     public token: string
     public tipo: string
-    public postagem: Postagem[]
+    public postagens: Postagem[]
 }
