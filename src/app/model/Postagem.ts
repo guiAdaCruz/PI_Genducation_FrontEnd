@@ -1,0 +1,12 @@
+import { Tema } from "./Tema"
+import { Usuario } from "./Usuario"
+
+export class Postagem{
+    public id: number
+    public titulo: string
+    public postagem: string
+    public date: Date
+    public urlImg: string
+    public tema: Tema
+    public usuario: Usuario
+}

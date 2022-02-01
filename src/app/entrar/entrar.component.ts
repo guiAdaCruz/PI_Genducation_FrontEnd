@@ -28,12 +28,12 @@ export class EntrarComponent implements OnInit {
     this.auth.logar(this.usuarioLogin).subscribe((resp: UsuarioCredenciais) => {
       this.usuarioCredenciais = resp
 
-      environment.nomeCompleto = resp.nomeCompleto
-      environment.email = resp.email
-      environment.tipo = resp.tipo
-      environment.token = resp.token
+      environment.nomeCompleto = this.usuarioCredenciais.nomeCompleto
+      environment.email = this.usuarioCredenciais.email
+      environment.tipo = this.usuarioCredenciais.tipo
+      environment.token = this.usuarioCredenciais.token
 
-      this.router.navigate(['/contato'])
+      this.router.navigate(['/inicio'])
     }, erro => {
       if (erro.status == 400 || erro.status == 401 || erro.status == 500) {
         alert('Usuário ou senha estão incorretos')
