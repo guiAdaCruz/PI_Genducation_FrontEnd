@@ -2,39 +2,37 @@
 
     <div class="container-fluid d-flex justify-content-center">
 
-        <div class="row d-flex justify-content-center bg-div col-md-5 ft-rubik">
+        <div class="row d-flex justify-content-center bg-div col-md-4 ft-rubik">
             <div class="col-xl-12">
 
-                <div class="row d-flex justify-content-center">
-                    <h1 class="text-center mt-3">Olá, Estudante</h1>
-                </div>
+             
 
-                <div class="d-flex justify-content-center mb-3">
-                    <h4>Cadastre sua conta</h4>
+                <div class="d-flex justify-content-center mb-3 mt-3">
+                    <h2>Cadastre sua conta </h2>
                 </div>
 
                 <div class="form-group">
                     <label for="nome">Nome</label>
                     <input [(ngModel)]="usuario.nomeCompleto" class="form-control formato" type="text" name="nome"
-                        id="nome" placeholder="Digite seu nome">
+                        id="nome" placeholder="&#xf007;  Digite seu nome" style="font-family:Arial, FontAwesome">
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-mail</label>
                     <input [(ngModel)]="usuario.email" class="form-control formato mb-3" type="email" name="email"
-                        id="email" placeholder="Digite seu e-mail">
+                        id="email" placeholder="&#xf003;  Digite seu email" style="font-family:Arial, FontAwesome">
                 </div>
 
                 <div class="form-group">
                     <label for="senha">Senha</label>
                     <input (input)='confirmarSenha($event)' class="form-control formato mb-3" type="password"
-                        name="senha" id="senha" placeholder="Digite sua senha">
+                        name="senha" id="senha" placeholder="&#xf023;  Digite sua senha" style="font-family:Arial, FontAwesome">
                 </div>
 
                 <div class="form-group">
                     <label for="confirmarSenha">Confirmar senha</label>
                     <input [(ngModel)]="usuario.senha" class="form-control formato mb-3" type="password"
-                        name="confirmarSenha" id="confirmarSenha" placeholder="Confirme sua senha">
+                        name="confirmarSenha" id="confirmarSenha" placeholder="&#xf023;  Confirme sua senha" style="font-family:Arial, FontAwesome">
                 </div>
 
                 <div class="form-group">
