@@ -19,11 +19,20 @@ export class TemaService {
     return this.http.get<Tema[]>('https://app-genducation.herokuapp.com/Genducation/tema', this.token)
   }
 
-  getByIdTema(id: number): Observable<Tema>{
+  getByIdTema(id: number): Observable<Tema> {
     return this.http.get<Tema>(`https://app-genducation.herokuapp.com/Genducation/tema/${id}`, this.token)
   }
 
   postTema(tema: Tema): Observable<Tema> {
     return this.http.post<Tema>('https://app-genducation.herokuapp.com/Genducation/tema/save', tema, this.token)
   }
+
+  putTema(tema: Tema): Observable<Tema> {
+    return this.http.put<Tema>('https://app-genducation.herokuapp.com/Genducation/tema/update', tema, this.token)
+  }
+
+  deleteTema(idTema: number) {
+    return this.http.delete(`https://app-genducation.herokuapp.com/Genducation/tema/${idTema}`, this.token)
+  }
+
 }
