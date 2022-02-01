@@ -5,6 +5,8 @@ export class Postagem{
     public id: number
     public titulo: string
     public postagem: string
+    public subtema: string
+    public escolaridade: string
     public date: Date
     public subtema: string
     public escolaridade: string
