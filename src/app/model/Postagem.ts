@@ -8,6 +8,8 @@ export class Postagem{
     public subtema: string
     public escolaridade: string
     public date: Date
+    public subtema: string
+    public escolaridade: string
     public urlImg: string
     public tema: Tema
     public usuario: Usuario

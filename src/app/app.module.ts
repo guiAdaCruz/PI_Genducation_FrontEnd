@@ -12,8 +12,13 @@ import { FormsModule } from "@angular/forms";
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { InicioComponent } from './inicio/inicio.component';
 import { TemaComponent } from './tema/tema.component';
+<<<<<<< HEAD
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+=======
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+>>>>>>> fdc986453cffe4eb939774eb6cdd22b279c1cb3c
 
 @NgModule({
   declarations: [
@@ -25,8 +30,13 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     RodapeComponent,
     InicioComponent,
     TemaComponent,
+<<<<<<< HEAD
+    PostagemEditComponent,
+    PostagemDeleteComponent
+=======
     TemaEditComponent,
     TemaDeleteComponent
+>>>>>>> fdc986453cffe4eb939774eb6cdd22b279c1cb3c
   ],
   imports: [
     BrowserModule,

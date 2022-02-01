@@ -27,10 +27,90 @@
 
 </div>
 
+<<<<<<< HEAD
+<div class="container mb-5 mt-5" id="postagens">
+    <nav>
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+
+          <a class="nav-link active text-secondary fw-bold" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as Postagens</a>
+
+          <a (click)="findByIdUser()" class="nav-link text-secondary fw-bold" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
+
+          <a class="nav-link text-secondary fw-bold" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por Tema</a>
+          
+        </div>
+      </nav>
+
+      <div class="tab-content mt-5" id="nav-tabContent">
+        
+        <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
+            
+            <div class="card-columns">
+                <div class="card text-center" *ngFor='let item of listaPostagens'>
+                    <div class="card-body">
+                      <h5 class="card-title m-0">{{item.titulo}}</h5>
+                      <small class="text-muted">Tema: {{item.tema.tema}}</small>
+                      <p class="card-text mt-3">{{item.postagem}}</p>
+                      <p class="card-text"><small class="text-muted">
+                          {{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}
+                        </small></p>
+
+                      <p class="card-text"><small class="text-muted">
+                          by: {{item.usuario.nomeCompleto}}
+                        </small></p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
+            
+            <div class="card-columns">
+                <div class="card text-center" *ngFor='let item of usuario.postagens'>
+                    <div class="card-body">
+                      <h5 class="card-title m-0"> {{item.titulo}}</h5>
+                      <small class="text-muted">Tema: {{item.tema.tema}}</small>
+                      <p class="card-text mt-3">{{item.postagem}}</p>
+                      <p class="card-text"><small class="text-muted">
+                          {{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}
+                        </small></p>
+
+                        <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
+            
+            <div class="card-columns" *ngFor="let tema of listaTemas">
+                <div class="card text-center" *ngFor='let item of tema.postagens'>
+                    <div class="card-body">
+                      <h5 class="card-title m-0"> {{item.titulo}}</h5>
+                      <p class="card-text mt-3">{{item.postagem}}</p>
+                      <p class="card-text"><small class="text-muted">
+                          {{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}
+                        </small></p>
+
+                        <p class="card-text"><small class="text-muted">by: {{item.usuario.nomeCompleto}}</small></p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+=======
 <div class="row m-0">
     <div class="col-md-10 d-flex justify-content-center mt-3 p-0">
         <p class="ft-rubik fs-18">Confira os temas de estudos, ou se preferir, <a routerLink="/tema">cadastre um novo:</a></p>
     </div>
+>>>>>>> fdc986453cffe4eb939774eb6cdd22b279c1cb3c
 </div>
 
 <div class="row d-flex justify-content-center m-0">
