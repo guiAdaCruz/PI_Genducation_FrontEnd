@@ -29,7 +29,19 @@ export class PostagemService {
     return this.http.get<Postagem>(`https://app-genducation.herokuapp.com/Genducation/postagens/postagem/${postagem}`, this.token)
   }
 
+  getByIdPostagem(id: number): Observable<Postagem>{
+    return this.http.get<Postagem>(`https://app-genducation.herokuapp.com/Genducation/postagens/${id}`, this.token)
+  }
+
   postPostagem(postagem: Postagem): Observable<Postagem>{
     return this.http.post<Postagem>('https://app-genducation.herokuapp.com/Genducation/postagens/save', postagem, this.token)
+  }
+
+  putPostagem(postagem: Postagem): Observable<Postagem>{
+    return this.http.put<Postagem>('https://app-genducation.herokuapp.com/Genducation/postagens/update', postagem, this.token)
+  }
+
+  deletePostagem(id: number){
+    return this.http.delete(`https://app-genducation.herokuapp.com/Genducation/postagens/${id}`, this.token)
   }
 }
