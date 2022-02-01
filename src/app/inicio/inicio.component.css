@@ -1,0 +1,36 @@
+.bg-gradient{
+background: linear-gradient(180deg, #7003C6 0%, #C316FF 100%);
+}
+
+.botao{
+
+    width: 110px;
+    height: 40px;
+    left: 1270px;
+    top: 18px;
+    border: 0px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    color: #9F0DE6;
+}
+
+.btn-temas{
+    width: 174px;
+    height: 75px;
+    left: 199px;
+    top: 610px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: linear-gradient(180deg, #7003C6 0%, #C316FF 100%);
+    border-radius: 5px;
+    color: white;
+    font-size: 15pt;
+}
+
+.fs-40{
+    font-size: 40pt;
+}
+
+.fs-20{
+    font-size: 20pt;
+}
