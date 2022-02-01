@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment.prod';
-import { EntrarComponent } from '../entrar/entrar.component';
 import { Usuario } from '../model/Usuario';
 import { UsuarioCredenciais } from '../model/UsuarioCredenciais';
 import { UsuarioLogin } from '../model/UsuarioLogin';
