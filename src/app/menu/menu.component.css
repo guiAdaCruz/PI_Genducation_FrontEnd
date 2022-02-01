@@ -13,3 +13,24 @@
     height: 50px;
     padding: 0;
 }
+
+.botao{
+
+    
+    width: 100px;
+    height: 30px;
+    left: 1270px;
+    top: 18px;
+    border: 0px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    
+}
+
+.botao:focus{
+    outline: none;
+}
+
+.ft-color{
+    color: #760AFF;
+}
