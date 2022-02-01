@@ -12,6 +12,8 @@ import { FormsModule } from "@angular/forms";
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { InicioComponent } from './inicio/inicio.component';
 import { TemaComponent } from './tema/tema.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { TemaComponent } from './tema/tema.component';
     EntrarComponent,
     RodapeComponent,
     InicioComponent,
-    TemaComponent
+    TemaComponent,
+    PostagemEditComponent,
+    PostagemDeleteComponent
   ],
   imports: [
     BrowserModule,
