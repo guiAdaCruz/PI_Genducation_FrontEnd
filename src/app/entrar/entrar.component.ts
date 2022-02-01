@@ -33,7 +33,7 @@ export class EntrarComponent implements OnInit {
       environment.tipo = this.usuarioCredenciais.tipo
       environment.token = this.usuarioCredenciais.token
 
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['/postagem'])
     }, erro => {
       if (erro.status == 400 || erro.status == 401 || erro.status == 500) {
         alert('Usuário ou senha estão incorretos')

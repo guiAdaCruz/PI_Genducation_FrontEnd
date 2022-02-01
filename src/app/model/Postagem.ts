@@ -9,4 +9,6 @@ export class Postagem{
     public urlImg: string
     public tema: Tema
     public usuario: Usuario
+    public subtema: string
+    public escolaridade: string
 }

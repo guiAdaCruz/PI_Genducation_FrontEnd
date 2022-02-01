@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+.ft-rubik {
+    font-family: 'Rubik', sans-serif;
+}
+
+textarea {
+    resize: none;
+}
+
+.box-post {
+
+    width: 891px;
+  
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.box-post-feed {
+
+    width: 891px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+
+.botao-pub {
+    width: 200px;
+    height: 40px;
+    border: 0px;
+    background: linear-gradient(180deg, rgba(118, 10, 255, 0.71) 0%, rgba(5, 0, 255, 0.71) 100%);
+    border-radius: 10px;
+}
+
+
+.botao {
+    width: 140px;
+    height: 40px;
+    border: 0px;
+    background: linear-gradient(180deg, rgba(118, 10, 255, 0.71) 0%, rgba(5, 0, 255, 0.71) 100%);
+    border-radius: 45px;
+}
+
+.b-cancelar {
+    width: 140px;
+    height: 40px;
+    border: 0px;
+    background: linear-gradient(180deg, rgba(164, 163, 166, 0.71) 0%, rgba(100, 100, 100, 0.71) 100%);
+    border-radius: 45px;
+
+}
