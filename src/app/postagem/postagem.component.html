@@ -15,9 +15,6 @@
                   <a class="nav-link active text-dark fw-bold" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as Postagens</a>
         
                   <a (click)="findByIdUser()" class="nav-link text-dark fw-bold" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
-        
-                  <a class="nav-link text-dark fw-bold" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por Tema</a>
-                  
                 </div>
               </nav>
               <div class="tab-content mt-5" id="nav-tabContent">
@@ -100,8 +97,8 @@
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-md-12 d-flex justify-content-center">
-                                            <button  class="btn b-cancelar text-white mr-3">Deletar</button>
-                                        <button class="btn botao text-white">Editar</button>
+                                            <button [routerLink]="['/postagem-delete', postagem.id]" class="btn b-cancelar text-white mr-3">Deletar</button>
+                                        <button [routerLink]="['/postagem-edit', postagem.id]"class="btn botao text-white">Editar</button>
                                         </div>
                                     </div>
                                     <div class="row ">
@@ -114,7 +111,6 @@
                         </div>
                     </div>
                 </div>
-
               </div>
         </div>
 

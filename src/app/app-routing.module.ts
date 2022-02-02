@@ -18,8 +18,6 @@ const routes: Routes = [
 {path: 'contato', component: ContatoComponent},
 {path: 'inicio', component: InicioComponent},
 {path: 'tema', component: TemaComponent},
-{path: 'tema-edit/:id', component: TemaEditComponent},
-{path: 'tema-delete/:id', component: TemaDeleteComponent},
 {path: 'postagem', component: PostagemComponent},
 {path: 'postagem-edit/:id', component: PostagemEditComponent},
 {path: 'postagem-delete/:id', component: PostagemDeleteComponent}
