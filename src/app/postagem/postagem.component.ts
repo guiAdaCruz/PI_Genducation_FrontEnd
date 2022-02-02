@@ -16,17 +16,16 @@ import { TemaService } from '../service/tema.service';
 })
 export class PostagemComponent implements OnInit {
 
-  div: boolean = true;
-  div1: boolean = false;
-
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
-
+ 
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number
 
+ 
+  
   usuario: Usuario = new Usuario()
   idUser = environment.email
   nome = environment.nomeCompleto
@@ -49,7 +48,7 @@ export class PostagemComponent implements OnInit {
     this.getAllTemas()
     this.getAllPostagens()
     this.listaMinhasPostagens = this.usuario.postagens
-    
+
   }
 
   getAllTemas(){
@@ -94,5 +93,7 @@ export class PostagemComponent implements OnInit {
       
     })
   }
+
+ 
 
 }
