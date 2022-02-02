@@ -35,6 +35,10 @@ background: linear-gradient(180deg, #7003C6 0%, #C316FF 100%);
     font-size: 20pt;
 }
 
+.fs-32{
+    font-size: 32pt;
+}
+
 .img-size{
     height: 150px;
     width: 150px;
