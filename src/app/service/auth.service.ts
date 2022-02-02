@@ -28,6 +28,10 @@ export class AuthService {
     return this.http.post<Usuario>('https://app-genducation.herokuapp.com/Genducation/usuarios/cadastrar', usuario)
   }
 
+  atualizar(usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>('https://app-genducation.herokuapp.com/Genducation/usuarios/atualizar', usuario)
+  }
+
   getByIdUser(id: string): Observable<Usuario>{
     return this.http.get<Usuario>(`https://app-genducation.herokuapp.com/Genducation/usuarios/${id}`)
   }
