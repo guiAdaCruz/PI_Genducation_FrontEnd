@@ -1,0 +1,54 @@
+<div class="container mt-5 mb-5">
+
+    <div class="row">
+        <div class="col-md 12">
+            <h1 class="text-center ft-rubik">Atualize seu cadastro:</h1>
+        </div>
+    </div>
+
+    <div class="col-md-12 ft-rubik">
+
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input [(ngModel)]="usuario.nomeCompleto" class="form-control formato" type="text" name="nome"
+                id="nome" placeholder="&#xf007;  Digite seu nome" style="font-family:Arial, FontAwesome">
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input [(ngModel)]="usuario.email" class="form-control formato mb-3" type="email" name="email" id="email" placeholder="&#xf003;  Digite seu email" style="font-family:Arial, FontAwesome" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="senha">Senha</label>
+            <input (input)='confirmarSenha($event)' class="form-control formato mb-3" type="password"
+                name="senha" id="senha" placeholder="&#xf023;  Digite sua senha" style="font-family:Arial, FontAwesome">
+        </div>
+
+        <div class="form-group">
+            <label for="confirmarSenha">Confirmar senha</label>
+            <input [(ngModel)]="usuario.senha" class="form-control formato mb-3" type="password"
+                name="confirmarSenha" id="confirmarSenha" placeholder="&#xf023;  Confirme sua senha" style="font-family:Arial, FontAwesome">
+        </div>
+
+        <div class="form-group">
+            <label for="tipo">Tipo de usuário</label>
+            <select class="form-control formato mb-3" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                <option>Selecione um tipo de usuário</option>
+                <option value="estudante">Estudante</option>
+                <option value="professor">Professor</option>
+            </select>
+        </div>
+
+        <div>
+            <div class="d-flex justify-content-center mb-3">
+                <button type="submit" class="btn b-cancelar mt-3 mr-3 text-white"
+                    routerLink='/inicio'>Cancelar</button>
+                <button type="submit" class="btn b-cadastrar mt-3 text-white"
+                    (click)='atualizar()'>Atualizar</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
