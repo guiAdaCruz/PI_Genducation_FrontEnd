@@ -1,0 +1,56 @@
+.bg-gradient {
+    background: linear-gradient(180deg, #7003C6 0%, #C316FF 100%);
+}
+
+.bg-gradient-footer {
+    background: linear-gradient(180deg, #C316FF 0%,#7003C6  100%);
+}
+
+.bg-gradient-1 {
+    background-color: #9900cc;
+}
+
+
+
+.bg {
+    background: #7003C6;
+}
+
+.mt-20 {
+    margin-top: 20vh;
+}
+
+
+.div-foco {
+    width: 891px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
+
+.botao {
+
+
+    width: 100px;
+    height: 30px;
+    left: 1270px;
+    top: 18px;
+    border: 0px;
+    background: #FFFFFF;
+    border-radius: 30px;
+
+}
+
+.botao:focus {
+    outline: none;
+}
+
+.ft-color {
+    color: #760AFF;
+}

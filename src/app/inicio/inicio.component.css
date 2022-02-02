@@ -14,6 +14,10 @@ background: linear-gradient(180deg, #7003C6 0%, #C316FF 100%);
     color: #9F0DE6;
 }
 
+a{
+    color: inherit;
+}
+
 .btn-temas{
     width: 174px;
     height: 75px;

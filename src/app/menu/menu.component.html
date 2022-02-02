@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg">
+<nav class="navbar navbar-expand-lg  navbar-light bg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
         aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
@@ -14,10 +14,13 @@
                 <a class="m-0 font-weight-bold ft-rubik text-white" routerLink="/inicio"> Home </a>
             </li>
             <li class="nav-item pl-3">
+                <a  class="m-0 font-weight-bold ft-rubik text-white" routerLink="/postagem"> Feed </a>
+            </li>
+            <li class="nav-item pl-3">
                 <a [routerLink]="['/user-edit', id]" class="m-0 font-weight-bold ft-rubik text-white" routerLink="/inicio"> Perfil </a>
             </li>
             <li class="nav-item pl-3">
-                <a class="m-0 font-weight-bold ft-rubik text-white" href="#"> Sobre </a>
+                <a class="m-0 font-weight-bold ft-rubik text-white" href="#sobre" (click)='comparar()'> Sobre </a>
             </li>
             <li class="nav-item pl-3">
                 <a class="m-0 font-weight-bold ft-rubik text-white" routerLink="/contato"> Contato </a>
