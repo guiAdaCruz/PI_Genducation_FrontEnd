@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ContatoComponent } from './contato/contato.component';
@@ -24,7 +24,7 @@ const routes: Routes = [
 {path: 'tema-delete/:id', component: TemaDeleteComponent},
 {path: 'postagem', component: PostagemComponent},
 {path: 'postagem-edit/:id', component: PostagemEditComponent},
-{path: 'postagem-delete/:id', component: PostagemDeleteComponent},
+{path: 'postagem-delete/:id', component: PostagemDeleteComponent}
 
 ];
 
