@@ -115,6 +115,55 @@
                     </div>
                 </div>
 
+                <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
+
+                    <div class="container mt-3 mb-5" *ngFor='let tema of listaTemas'>
+                        <div class="row mt-3 mb-5" *ngFor='let item of tema.postagens'>
+                            <div class="col-md-12 d-flex justify-content-center">
+                                <div class="box-post-feed">
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-md-10">
+                                            <h5 class="ft-rubik  mt-4"><i class="fa fa-user" aria-hidden="true"></i>
+                                                {{item.usuario.nomeCompleto}}</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-md-12 d-flex justify-content-center">
+                                            <p for="titulo" class="ft-rubik mt-3 mr-2"> <strong>Tema:</strong>
+                                                {{tema.tema}}</p>
+                                            <p for="titulo" class="ft-rubik mt-3 mr-2"> <strong>Escolaridade:</strong>
+                                                {{item.escolaridade}}</p>
+                                            <p for="titulo" class="ft-rubik mt-3"> <strong>Subtema:</strong> {{item.subtema}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-md-6 d-flex justify-content-center">
+                                            <h3 for="titulo" class="ft-rubik mt-4">{{item.titulo}}</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-md-10 d-flex justify-content-center">
+                                            <h5 for="texto" class="ft-rubik mt-4">{{item.postagem}}</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-md-10 d-flex justify-content-center">
+                                            <img src={{item.urlImg}} alt="" width="670px" height="220px">
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col-md-12 d-flex justify-content-end">
+                                            <p class="ft-rubik mt-3 mr-5"> {{item.date | date: 'dd/MM/yyyy'}} às {{item.date |
+                                                date: 'HH:mm'}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
               </div>
         </div>
 

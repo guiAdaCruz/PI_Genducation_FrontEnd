@@ -25,6 +25,10 @@
 }
 
 .margin{
-    margin-top: 102px;
-    margin-bottom: 102px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+container {
+    display: flex;
 }

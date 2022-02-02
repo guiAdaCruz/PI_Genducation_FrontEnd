@@ -16,6 +16,7 @@ const routes: Routes = [
 {path: 'contato', component: ContatoComponent},
 {path: 'inicio', component: InicioComponent},
 {path: 'tema', component: TemaComponent},
+{path: 'postagem', component: PostagemComponent},
 {path: 'postagem-edit/:id', component: PostagemEditComponent},
 {path: 'postagem-delete/:id', component: PostagemDeleteComponent}
 ];
