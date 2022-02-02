@@ -15,9 +15,9 @@ import { TemaComponent } from './tema/tema.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagemComponent } from './postagem/postagem.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
-import { AlertasComponent } from './alertas/alertas.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +32,11 @@ import { AlertasComponent } from './alertas/alertas.component';
     TemaEditComponent,
     TemaDeleteComponent,
     PostagemComponent,
+    TemaEditComponent,
+    TemaDeleteComponent,
     PostagemEditComponent,
     PostagemDeleteComponent,
-    AlertasComponent
+    UserEditComponent
   ],
   imports: [
     BrowserModule,

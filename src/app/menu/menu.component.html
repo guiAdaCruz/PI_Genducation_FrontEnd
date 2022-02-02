@@ -14,7 +14,7 @@
                 <a class="m-0 font-weight-bold ft-rubik text-white" routerLink="/inicio"> Home </a>
             </li>
             <li class="nav-item pl-3">
-                <a class="m-0 font-weight-bold ft-rubik text-white" routerLink="/postagem"> Feed </a>
+                <a [routerLink]="['/user-edit', id]" class="m-0 font-weight-bold ft-rubik text-white" routerLink="/inicio"> Perfil </a>
             </li>
             <li class="nav-item pl-3">
                 <a class="m-0 font-weight-bold ft-rubik text-white" href="#"> Sobre </a>
