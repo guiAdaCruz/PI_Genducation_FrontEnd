@@ -34,3 +34,50 @@ background: linear-gradient(180deg, #7003C6 0%, #C316FF 100%);
 .fs-20{
     font-size: 20pt;
 }
+
+.fs-32{
+    font-size: 32pt;
+}
+
+.img-size{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+}
+
+.card {
+    background: linear-gradient(180deg, #7003C6 0%, #C316FF 100%);
+    color: white;
+    width: 220px;
+    height: 340px;
+    margin: 10;
+    display: inline-block;
+    text-align: left;
+    text-align: center;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inline{
+    display: inline;
+    justify-content: center;
+    align-items: center; 
+}
+
+.br{
+    border-radius: 50px;
+}
+
+.logo{
+    width:40px;
+    height: 40px;
+}
+
+.afastamento{
+    margin-left: 25px;
+    margin-right: 25px;
+}

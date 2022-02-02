@@ -29,6 +29,8 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     RodapeComponent,
     InicioComponent,
     TemaComponent,
+    TemaEditComponent,
+    TemaDeleteComponent,
     PostagemComponent,
     TemaEditComponent,
     TemaDeleteComponent,
