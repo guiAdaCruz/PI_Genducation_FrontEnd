@@ -14,7 +14,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <input  type="text" class="form-control" id="tema"
-                            placeholder="Digite o tema">
+                           [(ngModel)]='tema.tema' placeholder="Digite o tema">
                     </div>
 
 
@@ -51,6 +51,10 @@
                 <tbody>
                     <tr *ngFor='let tema of listaTemas'>
                         <td>{{tema.tema}}</td>
+
+                        <td></td>
+                        <td></td>
+
                         <td class="d-flex justify-content-end">
                             <button class="btn btn-info mr-3" [routerLink]="['/tema-edit', tema.idTema]">Editar</button>
                             <button class="btn btn-danger" [routerLink]="['/tema-delete', tema.idTema]">Apagar</button>

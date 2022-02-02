@@ -6,6 +6,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { PostagemComponent } from './postagem/postagem.component';
 import { TemaComponent } from './tema/tema.component';
 
 const routes: Routes = [
