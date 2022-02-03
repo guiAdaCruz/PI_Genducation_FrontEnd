@@ -40,18 +40,16 @@ export class UserEditComponent implements OnInit {
     this.confirmSenha = event.target.value
   }
 
-  tipoUser(event: any) {
-    this.tipoUsuario = event.target.value
-  }
-
   atualizar() {
-    this.usuario.tipo = this.tipoUsuario
+    
 
     if (this.usuario.senha != this.confirmSenha) {
       this.alertas.showAlertDanger('As senhas estão incorretas.')
     } else {
       this.authService.atualizar(this.usuario).subscribe((resp: Usuario) => {
+        this.usuario.tipo = resp.tipo
         this.usuario = resp
+        
         this.router.navigate(['/inicio'])
         this.alertas.showAlertSuccess('Usuário atualizado com sucesso!')
 
