@@ -21,9 +21,8 @@ import { HomeComponent } from './home/home.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { OrderModule } from 'ngx-order-pipe';
 import { AlertasComponent } from './alertas/alertas.component';
-
-
 
 @NgModule({
   declarations: [
@@ -51,8 +50,8 @@ import { AlertasComponent } from './alertas/alertas.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    OrderModule,
     ModalModule.forRoot()
-
   ],
   providers: [{
     provide: LocationStrategy,

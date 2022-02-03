@@ -19,7 +19,7 @@
               </nav>
               <div class="tab-content mt-5" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
-                    <div class="container mt-3 mb-5" *ngFor='let item of listaPostagens'>
+                    <div class="container mt-3 mb-5" *ngFor='let item of listaPostagens | orderBy: key : reverse'>
                         <div class="row">
                             <div class="col-md-12 d-flex justify-content-center">
                                 <div class="box-post-feed">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-                    <div class="container mt-3 mb-5" *ngFor='let postagem of usuario.postagens'>
+                    <div class="container mt-3 mb-5" *ngFor='let postagem of usuario.postagens | orderBy: key : reverse'>
                         <div class="row">
                             <div class="col-md-12 d-flex justify-content-center">
                                 <div class="box-post-feed">

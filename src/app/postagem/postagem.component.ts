@@ -32,6 +32,9 @@ export class PostagemComponent implements OnInit {
   idUser = environment.email
   nome = environment.nomeCompleto
   listaMinhasPostagens: Postagem[] 
+
+  key = 'date'
+  reverse = true
  
   constructor(
     private router: Router,
