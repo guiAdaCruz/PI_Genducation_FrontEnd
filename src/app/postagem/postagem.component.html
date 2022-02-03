@@ -2,13 +2,13 @@
     <div class="container mt-3 mb-5">
         <div class="row d-flex justify-content-center">
             <div class="col-md-9 d-flex justify-content-center ">
-                <button data-toggle="modal" data-target=".bd-example-modal-lg" class="text-white btn botao-pub ft-rubik">
+                <button data-toggle="modal" data-target=".bd-example-modal-lg" class="text-white btn botao-pub ft-rubik mt-4">
                     Nova postagem <i class="fa fa-graduation-cap ml-2" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
 
-        <div class="container mb-5 mt-5" id="postagens">
+        <div class="container mb-5 mt-4" id="postagens">
             <nav>
                 <div class="ft-rubik nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
         
@@ -138,7 +138,8 @@
                             <div class="row d-flex justify-content-center">
                                 <div class="col-md-6">
                                     <label for="titulo" class="ft-rubik mt-4">Titulo:</label>
-                                    <input [(ngModel)]="postagem.titulo" class="form-control" type="text"
+                                    <input min="5" x-moz-errormessage="O titulo deve ter 5 caracteres no mínimo"
+                                    [(ngModel)]="postagem.titulo" class="form-control" type="text"
                                         class="form-control" id="titulo" placeholder="Digite o título">
                                 </div>
                                 <div class="col-md-4">
@@ -178,7 +179,7 @@
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center">
-                                <div class="col-md-10 align-items-center mb-4">
+                                <div class="col-md-10 align-items-center mb-4 d-flex justify-content-center mt-4">
                                     <button type="submit" class="btn b-cancelar mt-3 mr-3 text-white"
                                         data-dismiss="modal">Cancelar</button>
                                     <button data-dismiss="modal" (click)="publicar()"
