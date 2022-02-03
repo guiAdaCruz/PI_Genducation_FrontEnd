@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Tema } from 'src/app/model/Tema';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
+import { AlertasService } from 'src/app/service/alertas.service'; 
 
 @Component({
   selector: 'app-tema-edit',
@@ -17,7 +18,8 @@ export class TemaEditComponent implements OnInit {
   constructor(
     private temaService: TemaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -39,8 +41,12 @@ export class TemaEditComponent implements OnInit {
   atualizar() {
     this.temaService.putTema(this.tema).subscribe((resp: Tema) => {
       this.tema = resp
-      alert('Tema atualizado com sucesso!')
+      this.alertas.showAlertSuccess('Tema atualizado com sucesso!')
       this.router.navigate(['/tema'])
+    }, erro => {
+      if(erro.status == 400){
+        this.alertas.showAlertDanger('Erro: Já existe postagens dentro deste Tema.')
+      }
     })
   }
 
