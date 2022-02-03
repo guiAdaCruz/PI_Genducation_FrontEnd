@@ -41,8 +41,6 @@ export class UserEditComponent implements OnInit {
   }
 
   atualizar() {
-    
-
     if (this.usuario.senha != this.confirmSenha) {
       this.alertas.showAlertDanger('As senhas estão incorretas.')
     } else {

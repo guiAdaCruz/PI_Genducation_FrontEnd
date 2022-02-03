@@ -13,3 +13,9 @@
     height: 40px;
 }
 
+.logo-zoom:hover {
+    transition: 0.3s;
+    transform: scale(1.25);
+    cursor: pointer;
+}
+

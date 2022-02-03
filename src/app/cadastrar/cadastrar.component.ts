@@ -35,11 +35,8 @@ export class CadastrarComponent implements OnInit {
     this.confirmSenha = event.target.value;
   }
 
-
-
   cadastrar() {
     
-
     if (this.usuario.senha != this.confirmSenha) {
       this.alertas.showAlertDanger('As senhas estão incorretas.');
     } else {

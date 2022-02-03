@@ -10,14 +10,12 @@
     background-color: #9900cc;
 }
 
-
-
 .bg {
     background: #7003C6;
 }
 
-.mt-20 {
-    margin-top: 20vh;
+.mt-10 {
+    margin-top: 10vh;
 }
 
 
@@ -35,8 +33,6 @@
 }
 
 .botao {
-
-
     width: 100px;
     height: 30px;
     left: 1270px;
@@ -44,7 +40,6 @@
     border: 0px;
     background: #FFFFFF;
     border-radius: 30px;
-
 }
 
 .botao:focus {
@@ -53,4 +48,14 @@
 
 .ft-color {
     color: #760AFF;
+}
+
+.logo-zoom:hover {
+    transition: 0.3s;
+    transform: scale(1.25);
+    cursor: pointer;
+}
+
+.padding-left{
+    padding-left: 180px;
 }

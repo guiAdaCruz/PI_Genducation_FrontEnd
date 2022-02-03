@@ -14,8 +14,21 @@ html
     font-size: 54pt;
 }
 
-.fs-18
+.fs-14
 {
+    font-size: 14pt;
+}
+
+.fs-24{
+    font-size: 28pt;
+}
+
+.fs-18{
     font-size: 18pt;
 }
 
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

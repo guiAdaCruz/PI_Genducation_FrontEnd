@@ -86,8 +86,6 @@ export class PostagemComponent implements OnInit {
     this.usuario.email = this.idUser
     this.postagem.usuario = this.usuario
     
-
-
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
@@ -100,14 +98,13 @@ export class PostagemComponent implements OnInit {
       if(this.postagem.titulo.length < 5){
         this.alertas.showAlertDanger('Título da postagem deve ter mais de 5 caracteres.')
       }
-      else if(this.postagem.postagem.length < 10){
+      if(this.postagem.postagem.length < 10){
           this.alertas.showAlertDanger('Postagem deve ter mais de 10 caracteres.')
         }
       })
   }
 
   findByTituloPostagem(){
-    
     if(this.tituloPost == ''){
       this.getAllPostagens()
     } else {
@@ -115,8 +112,5 @@ export class PostagemComponent implements OnInit {
         this.listaPostagens = resp
       })
     }
-    }
-    
- 
-
+  }
 }

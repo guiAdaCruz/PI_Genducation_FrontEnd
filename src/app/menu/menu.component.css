@@ -13,11 +13,7 @@ a:hover{
     cursor: pointer;
 }
 
-
-
 .botao{
-
-    
     width: 100px;
     height: 30px;
     left: 1270px;
@@ -25,7 +21,6 @@ a:hover{
     border: 0px;
     background: #FFFFFF;
     border-radius: 30px;
-    
 }
 
 .botao:focus{
@@ -34,4 +29,10 @@ a:hover{
 
 .ft-color{
     color: #760AFF;
+}
+
+.logo-zoom:hover {
+    transition: 0.3s;
+    transform: scale(1.25);
+    cursor: pointer;
 }
