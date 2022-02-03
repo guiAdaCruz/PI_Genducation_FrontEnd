@@ -85,3 +85,10 @@ a{
     margin-left: 25px;
     margin-right: 25px;
 }
+
+.card-zoom:hover {
+    transition: 0.4s;
+    transform: scale(1.05);
+    box-shadow: 10px 10px 5px rgb(59, 59, 59);
+    cursor: pointer;
+}

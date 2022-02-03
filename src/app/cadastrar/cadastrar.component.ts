@@ -45,6 +45,9 @@ export class CadastrarComponent implements OnInit {
     } else {
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
+        if(this.usuario.tipo == ''){
+          this.usuario.tipo = 'estudante'
+        }
         this.router.navigate(['/entrar'])
         alert('Usuário cadastrado com sucesso!')
    }) 
