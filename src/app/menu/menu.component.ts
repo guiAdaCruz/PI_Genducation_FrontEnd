@@ -34,4 +34,12 @@ export class MenuComponent implements OnInit {
     }
   
   }
+
+  professor(){
+    if(environment.tipo == 'professor'){
+      return true
+    } else {
+      return false
+    }
+  }
 }

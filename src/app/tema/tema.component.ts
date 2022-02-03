@@ -29,10 +29,10 @@ export class TemaComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
-    /*if (environment.tipo != 'professor') {
-      alert('Você precisa ser professor para essa rota')
+    if (environment.tipo != 'professor') {
+      this.alertas.showAlertDanger('Você precisa ser professor para essa rota')
       this.router.navigate(['/inicio'])
-    }*/
+    }
 
     this.findAllTemas()
   }

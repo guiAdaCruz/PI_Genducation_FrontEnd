@@ -20,14 +20,12 @@ export class PostagemComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
- 
+  tituloPost : string
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number
 
- 
-  
   usuario: Usuario = new Usuario()
   idUser = environment.email
   nome = environment.nomeCompleto
@@ -108,6 +106,17 @@ export class PostagemComponent implements OnInit {
       })
   }
 
+  findByTituloPostagem(){
+    
+    if(this.tituloPost == ''){
+      this.getAllPostagens()
+    } else {
+      this.postagemService.getPostagemByTitulo(this.tituloPost).subscribe((resp : Postagem[]) =>{
+        this.listaPostagens = resp
+      })
+    }
+    }
+    
  
 
 }

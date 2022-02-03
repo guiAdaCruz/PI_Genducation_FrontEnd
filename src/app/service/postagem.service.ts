@@ -21,8 +21,8 @@ export class PostagemService {
     return this.http.get<Postagem[]>('https://app-genducation.herokuapp.com/Genducation/postagens', this.token)
   }
 
-  getPostagemByTitulo(titulo: string): Observable<Postagem>{
-    return this.http.get<Postagem>(`https://app-genducation.herokuapp.com/Genducation/postagens/titulo/${titulo}`, this.token)
+  getPostagemByTitulo(titulo: string): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://app-genducation.herokuapp.com/Genducation/postagens/titulo/${titulo}`, this.token)
   }
 
   getByPostagem(postagem: string): Observable<Postagem>{
