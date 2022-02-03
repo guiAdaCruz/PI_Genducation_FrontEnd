@@ -52,3 +52,7 @@ textarea {
     border-radius: 45px;
 
 }
+
+input:invalid {
+    border: 1px solid red;
+}
