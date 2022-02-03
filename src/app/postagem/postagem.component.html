@@ -7,6 +7,17 @@
                 </button>
             </div>
         </div>
+        <div class="row d-flex justify-content-center mt-3">
+            <div class="col-md-5 ft-rubik">
+                <h6 class="text-center">
+                    Pesquisar postagem
+                </h6>
+                <div class="form-group">
+                    <input type="text" class="form-control" [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()' placeholder="&#xf002; Titulo da postagem que deseja pesquisar" style="font-family:Arial, FontAwesome">
+                </div>
+                
+            </div>
+        </div>
 
         <div class="container mb-5 mt-5" id="postagens">
             <nav>
@@ -148,20 +159,21 @@
                                         </option>
                                     </select>
                                 </div>
-                                <div class="row ">
-                                    <div class="col-md-6">
-                                        <label class="ft-rubik mt-4">Escolaridade:</label>
-                                        <select class="form-control" name="tema" id="tema"
-                                            [(ngModel)]='postagem.escolaridade'>
-                                            <option value="Ensino Médio">Ensino Médio</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-    
-                                        <label for="urlImagem" class="ft-rubik mt-4">Subtema:</label>
-                                        <input [(ngModel)]="postagem.subtema" class="form-control" type="text">
-    
-                                    </div>
+
+                                
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                  
+                                <div class="col-md-6">
+                                    <label for="urlImagem" class="ft-rubik mt-4">Subtema:</label>
+                                    <input [(ngModel)]="postagem.subtema" class="form-control" type="text">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="ft-rubik mt-4">Escolaridade:</label>
+                                    <select class="form-control" name="tema" id="tema"
+                                        [(ngModel)]='postagem.escolaridade'>
+                                        <option value="Ensino Médio">Ensino Médio</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center">
@@ -177,6 +189,7 @@
                                     <input [(ngModel)]="postagem.urlImg" class="form-control" type="text">
                                 </div>
                             </div>
+                          
                             <div class="row d-flex justify-content-center">
                                 <div class="col-md-10 align-items-center mb-4">
                                     <button type="submit" class="btn b-cancelar mt-3 mr-3 text-white"
