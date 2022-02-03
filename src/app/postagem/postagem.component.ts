@@ -5,9 +5,11 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
+
 
 @Component({
   selector: 'app-postagem',
@@ -18,24 +20,26 @@ export class PostagemComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
- 
+  tituloPost : string
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number
 
- 
-  
   usuario: Usuario = new Usuario()
   idUser = environment.email
   nome = environment.nomeCompleto
   listaMinhasPostagens: Postagem[] 
+
+  key = 'date'
+  reverse = true
  
   constructor(
     private router: Router,
     private postagemService: PostagemService,
     private authService: AuthService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit(){
@@ -81,19 +85,38 @@ export class PostagemComponent implements OnInit {
 
     this.usuario.email = this.idUser
     this.postagem.usuario = this.usuario
+    
 
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem.usuario = this.usuario
       this.postagem = new Postagem()
       this.findByIdUser()
       this.getAllPostagens()
       
-    })
+    }, erro =>{
+      if(this.postagem.titulo.length < 5){
+        this.alertas.showAlertDanger('Título da postagem deve ter mais de 5 caracteres.')
+      }
+      else if(this.postagem.postagem.length < 10){
+          this.alertas.showAlertDanger('Postagem deve ter mais de 10 caracteres.')
+        }
+      })
   }
 
+  findByTituloPostagem(){
+    
+    if(this.tituloPost == ''){
+      this.getAllPostagens()
+    } else {
+      this.postagemService.getPostagemByTitulo(this.tituloPost).subscribe((resp : Postagem[]) =>{
+        this.listaPostagens = resp
+      })
+    }
+    }
+    
  
 
 }

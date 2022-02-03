@@ -1,43 +1,62 @@
 <div class="container mt-5 mb-5 ft-rubik">
 
-<div class="row d-flex justify-content-center">
-    <div class="col-md-12">
-        <h1 class="text-center text-dark">Atualizar postagem</h1>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+            <h1 class="text-center text-dark">Atualizar postagem</h1>
+        </div>
     </div>
-</div>
 
-<div class="row d-flex justify-content-center">
-    <div class="col-md-6">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
 
-        <div class="form-group">
-            <label for="titulo">Título</label>
-            <input [(ngModel)]="postagem.titulo" class="form-control" type="text" class="form-control" id="titulo" placeholder="Digite o título">
-        </div>
+            <div class="form-group">
+                <label for="titulo">Título</label>
+                <input [(ngModel)]="postagem.titulo" class="form-control" type="text" class="form-control" id="titulo"
+                    placeholder="Digite o título">
+            </div>
 
-        <div class="form-group">
-            <label for="texto">Texto</label>
-            <textarea [(ngModel)]="postagem.postagem" class="form-control" name="texto" id="texto" rows="3"></textarea>
-        </div>
+            <div class="form-group">
+                <label for="postagem">Postagem</label>
+                <textarea [(ngModel)]="postagem.postagem" class="form-control" name="postagem" id="postagem"
+                    rows="3"></textarea>
+            </div>
 
-        <div class="form-group">
-            <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>:</label>
-            <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' >
-                <option *ngFor='let item of listaTemas' value='{{item.idTema}}'>
-                    {{item.tema}}
-                </option>
-            </select>
-        </div>
+            <div class="form-group">
+                <label for="subtema">Subtema</label>
+                <input [(ngModel)]="postagem.subtema" class="form-control" type="text" class="form-control" id="titulo">
+            </div>
 
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-10  d-flex justify-content-center align-items-center mb-4">
-                <button class="btn b-cancelar mt-3 mr-3 text-white"
-                routerLink="/postagem">Cancelar</button>
-                <button data-dismiss="modal" (click)="atualizar()"
-                    class="btn botao text-white mt-3 ">Atualizar</button>
+            <div class="form-group">
+                <label for="escolaridade">Escolaridade</label>
+                <select class="form-control" name="escolaridade" id="escolaridade" [(ngModel)]='postagem.escolaridade'>
+                    <option value="Ensino Médio">Ensino Médio</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tema">Escolha um tema:</label>
+                <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema'>
+                    <option *ngFor='let item of listaTemas' value='{{item.idTema}}'>
+                        {{item.tema}}
+                    </option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="urlImg">Url da imagem:</label>
+                <input [(ngModel)]="postagem.urlImg" class="form-control" type="text" class="form-control" id="urlImg"
+                    >
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10  d-flex justify-content-center align-items-center mb-4">
+                    <button class="btn b-cancelar mt-3 mr-3 text-white" routerLink="/postagem">Cancelar</button>
+                    <button data-dismiss="modal" (click)="atualizar()"
+                        class="btn botao text-white mt-3 ">Atualizar</button>
+                </div>
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
 
 </div>

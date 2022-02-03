@@ -25,6 +25,10 @@
             <li class="nav-item pl-3">
                 <a class="m-0 font-weight-bold ft-rubik text-white" routerLink="/contato"> Contato </a>
             </li>
+
+            <li class="nav-item pl-3">
+                <a *ngIf='professor()' class="m-0 font-weight-bold ft-rubik text-white" routerLink="/tema"> Tema </a>
+            </li>
         </ul>
         <ul class="navbar-nav ml-auto mr-3">
             <li class="nav-item pl-3">

@@ -12,23 +12,50 @@
         </div>
     </div>
 
-    <div class="row d-flex justify-content-center mt-4">
-        <div class="col-md-4">
-
-            <div class="card text-center">
-                <div class="card-body">
-                  <h5 class="card-title m-0"> {{postagem.titulo}}</h5>
-                  <small class="text-muted"> Tema: {{postagem.tema.tema}}</small>
-                  <p class="card-text mt-3">{{postagem.postagem}}</p>
-                  <p class="card-text"><small class="text-muted">
-                      {{postagem.date | date: 'dd/MM/yyyy'}} às {{postagem.date | date: 'HH:mm'}}
-                    </small></p>
-
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <div class="box-post-feed">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10">
+                        <h5 class="ft-rubik  mt-4"><i class="fa fa-user" aria-hidden="true"></i>
+                            {{postagem.usuario.nomeCompleto}}</h5>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <p for="titulo" class="ft-rubik mt-3 mr-2"> <strong>Tema:</strong>
+                            {{postagem.tema.tema}}</p>
+                        <p for="titulo" class="ft-rubik mt-3 mr-2"> <strong>Escolaridade:</strong>
+                            {{postagem.escolaridade}}</p>
+                        <p for="titulo" class="ft-rubik mt-3"> <strong>Subtema:</strong> {{postagem.subtema}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <h3 for="titulo" class="ft-rubik mt-4">{{postagem.titulo}}</h3>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10 d-flex justify-content-center">
+                        <h5 for="texto" class="ft-rubik mt-4">{{postagem.postagem}}</h5>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10 d-flex justify-content-center">
+                        <img  class="img-fluid w-100 h-100" src={{postagem.urlImg}} alt="">
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-12 d-flex justify-content-end">
+                        <p class="ft-rubik mt-3 mr-5"> {{postagem.date | date: 'dd/MM/yyyy'}} às {{postagem.date |
+                            date: 'HH:mm'}}</p>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
+</div>
 
 
     <div class="pb-5 row d-flex justify-content-center">
@@ -40,4 +67,3 @@
         </div>
     </div>
 
-</div>

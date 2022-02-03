@@ -12,9 +12,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="nome">Nome</label>
+                    <label for="nome">Nome Completo</label>
                     <input [(ngModel)]="usuario.nomeCompleto" class="form-control formato" type="text" name="nome"
-                        id="nome" placeholder="&#xf007;  Digite seu nome" style="font-family:Arial, FontAwesome">
+                        id="nome" placeholder="&#xf007;  Digite seu nome completo" style="font-family:Arial, FontAwesome">
                 </div>
 
                 <div class="form-group">
@@ -34,15 +34,7 @@
                     <input [(ngModel)]="usuario.senha" class="form-control formato mb-3" type="password"
                         name="confirmarSenha" id="confirmarSenha" placeholder="&#xf023;  Confirme sua senha" style="font-family:Arial, FontAwesome">
                 </div>
-
-                <div class="form-group">
-                    <label for="tipo">Tipo de usuário</label>
-                    <select class="form-control formato mb-3" name="tipo" id="tipo" (change)='tipoUser($event)'>
-                        <option>Selecione um tipo de usuário</option>
-                        <option value="estudante">Estudante</option>
-                        <option value="professor">Professor</option>
-                    </select>
-                </div>
+             
 
                 <div>
                     <div class="d-flex justify-content-center mb-3">
