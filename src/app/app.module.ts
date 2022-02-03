@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,
