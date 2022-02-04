@@ -29,7 +29,11 @@
             <div class="form-group">
                 <label for="escolaridade">Escolaridade</label>
                 <select class="form-control" name="escolaridade" id="escolaridade" [(ngModel)]='postagem.escolaridade'>
+                    <option value="Alfabetização">Alfabetização</option>
+                    <option value="Ensino Fundamental">Ensino Fundamental</option>
                     <option value="Ensino Médio">Ensino Médio</option>
+                    <option value="Ensino Superior">Ensino Superior</option>
+                    <option value="Livre">Livre</option>
                 </select>
             </div>
 
@@ -44,8 +48,7 @@
 
             <div class="form-group">
                 <label for="urlImg">Url da imagem:</label>
-                <input [(ngModel)]="postagem.urlImg" class="form-control" type="text" class="form-control" id="urlImg"
-                    >
+                <input [(ngModel)]="postagem.urlImg" class="form-control" type="text" class="form-control" id="urlImg">
             </div>
 
             <div class="row d-flex justify-content-center">
