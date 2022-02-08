@@ -21,11 +21,13 @@ export class PostagemComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
   tituloPost : string
-  imagem : boolean;
+  imagem : boolean
+  escolaridade: string
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number
+  subtema: string
 
   usuario: Usuario = new Usuario()
   idUser = environment.email
@@ -120,4 +122,29 @@ export class PostagemComponent implements OnInit {
       })
     }
   }
+
+  findPostagemByEscolaridade(){
+    if(this.escolaridade == ''){
+      this.getAllPostagens()
+    } else {
+      this.postagemService.getPostagemByEscolaridade(this.escolaridade).subscribe((resp : Postagem[]) =>{
+        this.listaPostagens = resp
+      })
+    }
+  }
+
+  findPostagemBySubtema(){
+    if(this.subtema == ''){
+      this.getAllPostagens()
+    } else {
+      this.postagemService.getPostagemBySubtema(this.subtema).subscribe((resp : Postagem[]) =>{
+        this.listaPostagens = resp
+      })
+    }
+  }
+
+
+
 }
+
+

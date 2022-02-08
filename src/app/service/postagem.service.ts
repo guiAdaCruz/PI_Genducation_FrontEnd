@@ -25,6 +25,14 @@ export class PostagemService {
     return this.http.get<Postagem[]>(`https://app-genducation.herokuapp.com/Genducation/postagens/titulo/${titulo}`, this.token)
   }
 
+  getPostagemByEscolaridade(escolaridade: string): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://app-genducation.herokuapp.com/Genducation/postagens/escolaridade/${escolaridade}`, this.token)
+  }
+
+  getPostagemBySubtema(subtema: string): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://app-genducation.herokuapp.com/Genducation/postagens/subtema/${subtema}`, this.token)
+  }
+
   getByPostagem(postagem: string): Observable<Postagem>{
     return this.http.get<Postagem>(`https://app-genducation.herokuapp.com/Genducation/postagens/postagem/${postagem}`, this.token)
   }
