@@ -21,6 +21,7 @@ export class PostagemComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
   tituloPost : string
+  imagem : boolean;
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
@@ -79,13 +80,19 @@ export class PostagemComponent implements OnInit {
     })
   }
 
+
+
+
   publicar(){
     this.tema.idTema = this.idTema
     this.postagem.tema = this.tema
 
     this.usuario.email = this.idUser
     this.postagem.usuario = this.usuario
-    
+    if(this.postagem.urlImg == null){
+      this.postagem.urlImg = 'https://badentintas.com.br/images/paginas/1631642635.jpeg'
+    }
+
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
