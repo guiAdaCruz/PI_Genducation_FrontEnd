@@ -56,3 +56,9 @@ textarea {
 input:invalid {
     border: 1px solid red;
 }
+
+.fotoUser{
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+}

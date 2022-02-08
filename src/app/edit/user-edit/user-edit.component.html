@@ -6,6 +6,12 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center mb-3 mt-3">
+            <img class="foto" src={{usuario.foto}} alt="Foto de perfil">
+        </div>
+    </div>
+
     <div class="col-md-12 ft-rubik">
 
         <div class="form-group">
@@ -17,6 +23,12 @@
         <div class="form-group">
             <label for="email">E-mail</label>
             <input [(ngModel)]="usuario.email" class="form-control formato mb-3" type="email" name="email" id="email" placeholder="&#xf003;  Digite seu email" style="font-family:Arial, FontAwesome" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="foto">Link da Foto de Perfil</label>
+            <input [(ngModel)]="usuario.foto" class="form-control formato" type="text" name="foto"
+                id="foto" placeholder="&#xf030;  Insira o link da sua foto" style="font-family:Arial, FontAwesome">
         </div>
 
         <div class="form-group">

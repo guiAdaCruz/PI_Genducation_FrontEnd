@@ -24,6 +24,12 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="foto">Link da Foto de Perfil</label>
+                    <input [(ngModel)]="usuario.foto" class="form-control formato" type="text" name="foto"
+                        id="foto" placeholder="&#xf030;  Insira o link da sua foto" style="font-family:Arial, FontAwesome">
+                </div>
+
+                <div class="form-group">
                     <label for="senha">Senha</label>
                     <input (input)='confirmarSenha($event)' class="form-control formato mb-3" type="password"
                         name="senha" id="senha" placeholder="&#xf023;  Digite sua senha" style="font-family:Arial, FontAwesome">
