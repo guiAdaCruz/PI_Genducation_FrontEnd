@@ -64,7 +64,9 @@ export class PostagemEditComponent implements OnInit {
   atualizar(){
     this.tema.idTema = this.idTema
     this.postagem.tema = this.tema
-
+    if(this.postagem.urlImg == ''){
+      this.postagem.urlImg = 'https://badentintas.com.br/images/paginas/1631642635.jpeg'
+    }
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) =>{
       this.postagem = resp
       this.alertas.showAlertSuccess('Postagem atualizada com sucesso!')
