@@ -40,7 +40,7 @@ export class CadastrarComponent implements OnInit {
     if (this.usuario.senha != this.confirmSenha) {
       this.alertas.showAlertDanger('As senhas estão incorretas.');
     } else {
-      if(this.usuario.foto == ''){
+      if(this.usuario.foto == '' || this.usuario.foto == null){
         this.usuario.foto = 'https://i.imgur.com/Q0Ydqzv.png'
       }
         this.usuario.tipo = 'estudante'
